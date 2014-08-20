@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "wildemitter": "1.x",
-    "webrtcsupport": "0.7.x"
+    "webrtcsupport": "git://github.com/sylturner/webrtcsupport.git"
   },
   "devDependencies": {
     "browserify": "2.x",
