@@ -191,7 +191,7 @@ TraceablePeerConnection.prototype.createAnswer = function (successCallback, fail
 
 TraceablePeerConnection.prototype.addIceCandidate = function (candidate, successCallback, failureCallback) {
     var self = this;
-    this.trace('addIceCandidate', JSON.stringify(candidate, null, ' '));
+    //this.trace('addIceCandidate', JSON.stringify(candidate, null, ' '));
     this.peerconnection.addIceCandidate(candidate);
     /* maybe later
     this.peerconnection.addIceCandidate(candidate, 
