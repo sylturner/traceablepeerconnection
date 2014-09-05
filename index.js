@@ -24,7 +24,7 @@ function TraceablePeerConnection(config, constraints) {
 
     this.onicecandidate = null;
     this.peerconnection.onicecandidate = function (event) {
-        self.trace('onicecandidate', JSON.stringify(event.candidate, null, ' '));
+        //self.trace('onicecandidate', JSON.stringify(event.candidate, null, ' '));
         if (self.onicecandidate !== null) {
             self.onicecandidate(event);
         }
@@ -159,7 +159,7 @@ TraceablePeerConnection.prototype.close = function () {
 
 TraceablePeerConnection.prototype.createOffer = function (successCallback, failureCallback, constraints) {
     var self = this;
-    this.trace('createOffer', JSON.stringify(constraints, null, ' '));
+    //this.trace('createOffer', JSON.stringify(constraints, null, ' '));
     this.peerconnection.createOffer(
         function (offer) {
             self.trace('createOfferOnSuccess', dumpSDP(offer));
@@ -175,7 +175,7 @@ TraceablePeerConnection.prototype.createOffer = function (successCallback, failu
 
 TraceablePeerConnection.prototype.createAnswer = function (successCallback, failureCallback, constraints) {
     var self = this;
-    this.trace('createAnswer', JSON.stringify(constraints, null, ' '));
+    //this.trace('createAnswer', JSON.stringify(constraints, null, ' '));
     this.peerconnection.createAnswer(
         function (answer) {
             self.trace('createAnswerOnSuccess', dumpSDP(answer));
